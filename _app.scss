@@ -1,0 +1,149 @@
+// reset
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+// fonts
+$font-cursive: 'Kaushan Script', cursive;
+$font-family: 'Roboto','Arial','Helvetica', sans-serif;
+$font-size:16px;
+// colors
+$white:#fff;
+$navigation-hover: #f2c36ddf;
+$spacer-red:#f4161699;
+$spacer-gray:#dddddd;
+$description-txt-color: #5c5c5c99;
+$btn-subscribe:#74eec5;
+
+body{
+    font-size: $font-size;
+    font-family: $font-family;
+    text-align: center;
+}
+
+// global styles
+.container{
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+.title, .btn {
+    display: block;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: bold;
+} 
+
+.description {
+    color: $description-txt-color;
+}
+
+.btn {
+    margin: 20px auto;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn--outline {
+    background-color: transparent;
+    border: 2px solid $white;
+    color: $white;
+}
+
+.btn--subscribe{
+    margin: 0;
+    height: 37px;
+    background-color:$btn-subscribe ;
+    color: $white;
+    border-style: none;
+    display: inline;
+}
+
+.spacer--red{
+    margin:30px auto;
+    height: 3px;
+    width: 50px;
+    background-color: $spacer-red;
+}
+
+.spacer--gray{
+    margin: 20px auto;
+    background-color: $spacer-gray;
+    height: 1px;
+    width: 1140px;
+}
+
+.red{
+    color: $spacer-red;
+}
+
+.grid--container, .grid--container--photos{
+    display: grid;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.icon--small{
+    width: 24px;
+    height: 24px;
+}
+
+.icon--social{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+   
+}
+
+.gradient--bgc{
+    background-image: url('/icons/eagle-ga32af4304_1920.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background: linear-gradient(rgba(252, 124, 124,.9), rgba(255, 232, 140,.9));
+    }
+}
+
+.gradient--bgc > * {
+    z-index: 10;
+    position: relative;
+}
+
+@media screen and(min-width:769px){
+    .grid--container{
+        grid-template-columns: repeat(2,1fr)
+    }
+    
+}
+
+@media screen and(min-width:969px){
+    .grid--container{
+        grid-template-columns: repeat(3,1fr)
+    }
+    .grid--container--photos{
+        grid-template-columns: repeat(2,1fr)
+    }
+}
+
+@media screen and(min-width:1400px){
+    .grid--container,.grid--container--photos{
+        grid-template-columns: repeat(3,1fr)
+    }
+}

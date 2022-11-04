@@ -1,0 +1,30 @@
+.navigation{
+    padding: 40px;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    .navigation__logo{
+       font-size: 25px;
+       font-weight: bold;
+       display: inline-block;
+       text-decoration: none;
+       color: $white;
+    }
+    .navigation__list{
+        display: flex;
+        list-style: none;
+        .navigation__link{
+            margin: 0 20px;
+            padding-bottom: 3px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $white;
+            border-bottom: 3px solid transparent;
+            transition: .3s;
+            &:hover{
+                color: $navigation-hover;
+                border-bottom: 3px solid #ffa500;
+            }
+        }
+    }
+}

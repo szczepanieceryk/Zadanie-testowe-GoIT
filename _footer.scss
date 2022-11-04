@@ -1,0 +1,18 @@
+.footer{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    .footer__txt{
+        display: inline;
+        line-height: 37px;
+    }
+    .footer__input__container{
+        display: inline;
+        .footer__email__input{
+            padding: 10px;
+            display: inline;
+            border: 1px solid $description-txt-color;
+        }
+    }
+    
+}

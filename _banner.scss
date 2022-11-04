@@ -1,0 +1,19 @@
+.banner{   
+    padding: 30px 0 120px 0;
+
+    .banner__title, .banner__welcome{
+        color: $white;
+    }
+
+    .banner__title{
+        margin-bottom: 20px;
+        font-size: 45px;
+        text-transform: capitalize;
+        font-family: $font-cursive;
+    }
+    .banner__welcome{
+        margin-bottom: 50px;
+        font-size: 90px;
+        text-transform: uppercase;
+    }
+}

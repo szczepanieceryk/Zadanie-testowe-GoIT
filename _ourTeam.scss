@@ -1,0 +1,83 @@
+.our__team{
+    margin-bottom: 80px;
+    .our__team__title{
+        font-family: $font-cursive;
+    }
+    .our__team__subtitle{
+        margin-top: 10px;
+        text-transform: uppercase;
+    }
+    .our__team__description{
+        margin: 30px auto 50px;
+        max-width: 800px;
+    }
+    .our__team__members{
+        .our__team__single__member{
+            .card{
+                margin: 20px 10px;
+                position: relative;
+                opacity: 1;
+                .our__team__member__photo{
+                    margin: 0 auto;
+                    width: auto;
+                    max-width: 400px;
+                    min-height: 376px;
+                    cursor: pointer;
+                }
+    
+                .our__team__socials{
+                    margin: 0 auto;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    height: 36px;
+                    transform: translate(-50%,-50%);
+                    max-width: 140px;
+                    background-color: rgba(255, 232, 140);
+                    opacity: 0;
+                    transition: opacity ease-out 250ms;
+                    z-index: 20;
+                    .icon--social:hover{
+                        background: rgba(252, 124, 124,.3);
+                        line-height: 38px;
+                    }
+                   
+                }
+             
+                .our__team__member__photo:hover{
+                    opacity: .2;
+                    transition: opacity ease-out 250ms;
+                }
+        
+                .our__team__member__photo:hover .our__team__socials{
+                    transition: opacity ease-out 250ms;
+                    
+                }
+            }
+            .card:hover .our__team__socials{
+                opacity: 1;
+            }
+                     
+            .our__team__member__name{
+                margin-bottom: 5px;
+                text-transform: uppercase;
+                display: block;
+            }
+            .our__team__member__position {
+                text-transform: capitalize;
+                font-style: italic;
+                color: $spacer-gray;
+            }
+           
+        }
+    }
+}
+
+ @media screen and (min-width:1400px){
+    .card{
+        background: linear-gradient(rgba(252, 124, 124,.9), rgba(255, 232, 140,.9));
+    }
+    .card:hover{
+        box-shadow: 10px 10px 0px 0px $btn-subscribe;
+    }
+ } 
